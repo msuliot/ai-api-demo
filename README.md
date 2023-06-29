@@ -13,7 +13,7 @@ https://github.com/msuliot/ai-api-demo
 1. Must have Python3.
 2. Get repository clone or download
 ```bash
-git clone https://github.com/msuliot/simple_ai.git 
+git clone https://github.com/msuliot/ai-api-demo.git 
 ```
 3. use pip or pip3 to install any dependencies.
 ```bash
