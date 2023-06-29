@@ -39,7 +39,7 @@ import os
 os.environ["OPENAI_API_KEY"] = 'YOUR_OPEN_AI_KEY'
 ```
 
-**Delete the placeholder-delete-this files in the data and storage directories.**
+Then, delete the placeholder-delete-this files in the data and storage directories.
 
 Then, save any PDFs in the 'data' directory.
 
