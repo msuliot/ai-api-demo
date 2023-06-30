@@ -1,5 +1,4 @@
 import os
-#local 
 import _util
 import _rules
 
@@ -9,10 +8,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-data = {
-        'prompt': "",
-        'response': "",
-    }
+data = {'prompt': "",'response': "",}
 
 @app.route('/api', methods=['POST'])
 def get_variable():
@@ -20,7 +16,7 @@ def get_variable():
     data['prompt'] = _util.decode(prompt)
     return _rules.get(data)
 
-##### LOCAL DEBUG #######
+##### LOCAL #######
 if __name__ == '__main__':
     print('Running API')
     app.run(host="0.0.0.0", port=8000)
