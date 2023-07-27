@@ -1,8 +1,10 @@
-# ------ > Run the command below in the terminal, use -- printenv -- to validate OPENAI_API_KEY
-# export OPENAI_API_KEY="your_key_from_openai"
-# OR
-# import os
-# os.environ["OPENAI_API_KEY"] = 'YOUR_OPEN_AI_KEY'
+import openai
+
+# get keys from .env file
+import os
+from dotenv import load_dotenv
+load_dotenv()
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
 from pathlib import Path
 from llama_index import download_loader

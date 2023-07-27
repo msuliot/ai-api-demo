@@ -27,16 +27,9 @@ pip install Flask-Cors
 
 Make sure to get an OpenAI key from https://platform.openai.com/account/api-keys
 
-Add your OpenAI Key to the OS environmental variables
+Create a ".env" file and put your OpenAI key in that file
 ```bash
-export OPENAI_API_KEY="YOUR_OPEN_AI_KEY"
-```
-<< OR >>
-
-Add the following to both Python files
-```bash
-import os
-os.environ["OPENAI_API_KEY"] = 'YOUR_OPEN_AI_KEY'
+OPENAI_API_KEY='your key here'
 ```
 
 Then, delete the placeholder-delete-this files in the data and storage directories.
