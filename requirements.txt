@@ -1,0 +1,4 @@
+openai
+llama-index
+Flask
+Flask-Cors

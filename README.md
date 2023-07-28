@@ -15,12 +15,9 @@ https://github.com/msuliot/ai-api-demo
 ```bash
 git clone https://github.com/msuliot/ai-api-demo.git 
 ```
-3. use pip or pip3 to install any dependencies.
+3. use pip3 to install any dependencies.
 ```bash
-pip install openai
-pip install llama-index
-pip install Flask
-pip install Flask-Cors
+pip3 install -r requirements.txt
 ```
 
 ## Usage
