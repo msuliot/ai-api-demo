@@ -36,7 +36,7 @@ OPENAI_API_KEY='your key here'
     ```bash
     python3 full_automatic.py
     ```
-- You will the model_id from the output of the full automatic process.
+- You will need the model_id from the output of the full automatic process.
 - This process can take OpenAI about 5-20 minutes to complete.
 
 - Update the _api.py file with your model_id
