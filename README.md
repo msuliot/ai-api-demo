@@ -1,5 +1,7 @@
 # AI API Demo
 
+This application is designed to generate a refined OpenAI model by fine-tuning it to perform optimally. The demonstration includes a user interface built with React to emulate a chatbot powered by a custom, fine-tuned model. This model can be accessed via a Python API, which facilitates seamless interaction between the frontend and the backend. This ensures not only an interactive and responsive user experience but also enables the application to harness the full potential of the custom-trained model.
+
 ## This demo has 2 github dependencies that must be installed in order to run the full demo:
 
 React UI - (ai-react-demo) 
