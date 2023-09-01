@@ -1,6 +1,6 @@
 import os
-import _util
 import _api
+import _util
 
 from flask import Flask, request
 from flask_cors import CORS
@@ -14,10 +14,10 @@ data = {'prompt': "",'response': "",}
 def get_variable():
     prompt = request.form.get('prompt')
     data['prompt'] = _util.decode(prompt)
-    return _api.get(data)
+    return _api.get_from_openAI(data)
 
 ##### LOCAL #######
 if __name__ == '__main__':
     print('Running API')
-    app.run(host="0.0.0.0", port=8000)
+    app.run(host="localhost", port=8000)
     

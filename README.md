@@ -1,14 +1,14 @@
 # AI API Demo
 
-This demo has 2 github dependencies
+## This demo has 2 github dependencies that must be installed in order to run the full demo:
 
-React UI - (ai-react-demo)
+React UI - (ai-react-demo) 
 https://github.com/msuliot/ai-react-demo
 
 API - (ai-api-demo)
 https://github.com/msuliot/ai-api-demo
 
-## Installation
+## Installation for API
 
 1. Must have Python3.
 2. Get repository clone or download
@@ -17,8 +17,8 @@ git clone https://github.com/msuliot/ai-api-demo.git
 ```
 3. use pip3 to install any dependencies.
 ```bash
-pip3 install -r requirements.txt
-```
+pip3 install --upgrade -r requirements.txt
+```z
 
 ## Usage
 
@@ -29,21 +29,25 @@ Create a ".env" file and put your OpenAI key in that file
 OPENAI_API_KEY='your key here'
 ```
 
-Then, delete the placeholder-delete-this files in the data and storage directories.
+## Create your OpenAI fine-tuning model
+- Full automatic will run the entire process from start to finish.
+- full_automatic.py and sample data.jsonl file is located in the create_model folder. 
+- Data must be in json lines format.
+    ```bash
+    python3 full_automatic.py
+    ```
+- You will the model_id from the output of the full automatic process.
+- This process can take OpenAI about 5-20 minutes to complete.
 
-Then, save any PDFs in the 'data' directory.
-
-Then run your data importer in VS Code or
-```bash
-python3 data_import.py
-```
-When the process is complete it will store result in a vector database located in the 'storage' directory
-
+- Update the _api.py file with your model_id
+    
 ## To run the API in dev mode, use the following command:
 
 ```bash
 python3 app.py
 ```
+
+The API will run on port 8000 by default.
 
 ## Notes
 

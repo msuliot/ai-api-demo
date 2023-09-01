@@ -1,6 +1,4 @@
 from flask import jsonify
-from llama_index import StorageContext, load_index_from_storage
-
 import openai
 
 # get keys from .env file
@@ -9,18 +7,27 @@ from dotenv import load_dotenv
 load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
-def get(data):
-    print(data)
+model_id = "MODEL_ID_HERE"
+
+def get_from_openAI(data): 
     try:
-        storageDB = './storage'
-        storage_context = StorageContext.from_defaults(persist_dir=storageDB)
-        index = load_index_from_storage(storage_context)
-        query_engine = index.as_query_engine()
-        response = query_engine.query(data['prompt'])
-        data['response'] = response.response
-    except Exception as ex:
-        data['response'] = str(ex)
+        completion = openai.ChatCompletion.create(
+            model=model_id,
+            temperature=0.0,
+            messages=[
+                {"role": "system", "content": "You are a helpful and professional customer service representative, If you don't know something, just say, I don't know"},
+                {"role": "user", "content": data['prompt']},
+            ]
+        )
 
-    return jsonify(data)
-
+        data['response'] = completion.choices[0].message["content"]
+        return jsonify(data)
     
+        # print(completion.choices[0].message["content"])
+        # sys.exit(0)
+
+    except Exception as e:
+        #Handle service unavailable error
+        # print(f"OpenAI API request failed: {e}")
+        data['response'] = f"Error: {e}"
+        return jsonify(data)
