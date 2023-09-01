@@ -18,7 +18,7 @@ git clone https://github.com/msuliot/ai-api-demo.git
 3. use pip3 to install any dependencies.
 ```bash
 pip3 install --upgrade -r requirements.txt
-```z
+```
 
 ## Usage
 
