@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
-model_id = "MODEL_ID_HERE"
+model_id = "MODEL_ID_HERE" ############# CHANGE THIS #############
 
 def get_from_openAI(data): 
     try:
