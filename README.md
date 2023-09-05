@@ -40,7 +40,6 @@ OPENAI_API_KEY='your key here'
     ```
 - You will need the model_id from the output of the full automatic process.
 - This process can take OpenAI about 5-20 minutes to complete.
-
 - Update the _api.py file with your model_id
     
 ## To run the API in dev mode, use the following command:
